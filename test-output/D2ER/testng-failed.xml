@@ -11,24 +11,17 @@
       <class name="sqh.automation.D2ERTest.D2EREmployeeTest">
         <methods>
           <include name="EcommerceRedirectValidation"/>
+          <include name="NavigateToEmployeePage"/>
           <include name="AddMultipleEmployeesManually"/>
           <include name="InitializeDriver"/>
+          <include name="AddSingleEmployee"/>
           <include name="ResendInvitation"/>
           <include name="ValidateEditEmpRefNumber"/>
+          <include name="ValidateExportEmployees"/>
           <include name="LogintoCustomerAccount"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- sqh.automation.D2ERTest.D2EREmployeeTest -->
-      <class name="sqh.automation.D2ERTest.D2ERValidationTest">
-        <methods>
-          <include name="InvoiceValidations"/>
-          <include name="InitializeDriver"/>
-          <include name="EmailSearchValidation"/>
-          <include name="tearDown"/>
-          <include name="SideMenuValidations"/>
-          <include name="LogintoCustomerAccount"/>
-        </methods>
-      </class> <!-- sqh.automation.D2ERTest.D2ERValidationTest -->
       <class name="sqh.automation.D2ERTest.D2ERLoginTest">
         <methods>
           <include name="InitializeDriver"/>
@@ -36,10 +29,29 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- sqh.automation.D2ERTest.D2ERLoginTest -->
+      <class name="sqh.automation.D2ERTest.D2ERValidationTest">
+        <methods>
+          <include name="FinanceSectionValidations"/>
+          <include name="ManageBillingAccValidations"/>
+          <include name="D2ERSearchFiltersValidations"/>
+          <include name="D2ERTableValidations"/>
+          <include name="tearDown"/>
+          <include name="NavigateToEmployeePage"/>
+          <include name="InvoiceValidations"/>
+          <include name="AddEmployeeValidations"/>
+          <include name="InitializeDriver"/>
+          <include name="EmailSearchValidation"/>
+          <include name="EmpReferenceNumberValidations"/>
+          <include name="SideMenuValidations"/>
+          <include name="D2ERPagevalidations"/>
+          <include name="LogintoCustomerAccount"/>
+        </methods>
+      </class> <!-- sqh.automation.D2ERTest.D2ERValidationTest -->
       <class name="sqh.automation.D2ERTest.D2ERFinanceTest">
         <methods>
           <include name="LogintoCustomerAccount"/>
           <include name="InitializeDriver"/>
+          <include name="NavigateToEmployeePage"/>
           <include name="tearDown"/>
           <include name="ValidateInvoicesTabs"/>
         </methods>

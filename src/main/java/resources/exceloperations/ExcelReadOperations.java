@@ -5,13 +5,15 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import org.apache.poi.ss.usermodel.Cell;
+
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.google.common.collect.Table.Cell;
 
 import resources.webdriveroperations.AppConfig;
 public class ExcelReadOperations {
@@ -36,7 +38,7 @@ public class ExcelReadOperations {
 		DateFormat df = new SimpleDateFormat("dd/mm/yyyy");
 		String Data= null;
 		FormulaEvaluator evaluator = workbook.getCreationHelper().createFormulaEvaluator();	
-		Cell tempCellData = row.getCell(CellNum);
+		org.apache.poi.ss.usermodel.Cell tempCellData = row.getCell(CellNum);
 		evaluator.evaluateFormulaCell(tempCellData);	
 			
 		if(tempCellData.getCellType()==CellType.STRING)
