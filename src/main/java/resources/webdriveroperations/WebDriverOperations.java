@@ -30,8 +30,8 @@ public class WebDriverOperations {
 			chromePrefs.put("download.default_directory", workspacePath+"/Exporting_files/");
 			ChromeOptions options = new ChromeOptions();
 			options.setExperimentalOption("prefs", chromePrefs);
-			//options.addArguments("--headless");
-			//options.addArguments("--disable-gpu");
+			options.addArguments("--headless");
+			options.addArguments("--disable-gpu");
 			options.addArguments("--window-size=1920,1080");
 			options.addArguments("--allow-insecure-localhost");
 			options.addArguments("--disable-dev-shm-usage");
