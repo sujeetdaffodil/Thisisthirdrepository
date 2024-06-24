@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [D2ER]" guice-stage="DEVELOPMENT">
+  <parameter name="baseurl" value="https://goldeneye.squarehealth.com/"/>
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="resources.listeners.ExtentListeners"/>
+  </listeners>
+  <test thread-count="5" name="D2ER_Test(failed)">
+    <classes>
+      <class name="sqh.automation.D2ERTest.D2EREmployeeTest">
+        <methods>
+          <include name="EcommerceRedirectValidation"/>
+          <include name="AddMultipleEmployeesManually"/>
+          <include name="InitializeDriver"/>
+          <include name="ResendInvitation"/>
+          <include name="ValidateEditEmpRefNumber"/>
+          <include name="LogintoCustomerAccount"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- sqh.automation.D2ERTest.D2EREmployeeTest -->
+      <class name="sqh.automation.D2ERTest.D2ERValidationTest">
+        <methods>
+          <include name="InvoiceValidations"/>
+          <include name="InitializeDriver"/>
+          <include name="EmailSearchValidation"/>
+          <include name="tearDown"/>
+          <include name="SideMenuValidations"/>
+          <include name="LogintoCustomerAccount"/>
+        </methods>
+      </class> <!-- sqh.automation.D2ERTest.D2ERValidationTest -->
+      <class name="sqh.automation.D2ERTest.D2ERLoginTest">
+        <methods>
+          <include name="InitializeDriver"/>
+          <include name="ValidateLoginWithCorrectCredentials"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- sqh.automation.D2ERTest.D2ERLoginTest -->
+      <class name="sqh.automation.D2ERTest.D2ERFinanceTest">
+        <methods>
+          <include name="LogintoCustomerAccount"/>
+          <include name="InitializeDriver"/>
+          <include name="tearDown"/>
+          <include name="ValidateInvoicesTabs"/>
+        </methods>
+      </class> <!-- sqh.automation.D2ERTest.D2ERFinanceTest -->
+    </classes>
+  </test> <!-- D2ER_Test(failed) -->
+</suite> <!-- Failed suite [D2ER] -->
