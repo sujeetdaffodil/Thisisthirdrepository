@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--   <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
 <suite name="SanitySuite1">
+	   <listeners>
+        <listener class-name="resources.listeners.ExtentListeners" />
+    </listeners>
+		<parameter name="browser" value="chrome" />
+		<parameter name="baseurl" value="https://goldeneye.squarehealth.com/" />  
+		
+  <test thread-count="1" name="D2ER_Test">
 	<suite-files>
 
 		<suite-file path="Sanity.xml" />
